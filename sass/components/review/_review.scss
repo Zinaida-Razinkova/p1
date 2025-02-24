@@ -1,0 +1,184 @@
+.review {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    color: $review-color1;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.154;
+    padding-top: 30px;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+
+}
+
+.review__wrapper {
+    max-width: 550px;
+    flex: 1;
+    background-color: $text-color;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 10px;
+    padding: 15px;
+    color: $primary-color;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 769px) {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    @media screen and (min-width: 1100px) {
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+}
+
+.review__top {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $review-color2;
+
+}
+
+.review__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin-right: 6px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.review__avatar1,
+.review__avatar3 {
+    background-color: #fddce5;
+
+}
+
+.review__avatar2,
+.review__avatar4 {
+    background-color: #fffbd6;
+}
+
+
+.review__data {
+    h3 {
+        font-weight: 600;
+    }
+}
+
+.review__name {
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.review__block {
+    display: flex;
+    align-items: center;
+    color: $review-color2;
+}
+
+.review__geo {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.review__geo-icon {
+    margin-right: 3px;
+}
+
+.review__content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $review-color2;
+
+    p {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+    }
+
+    h3 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+}
+
+.review__content-stars {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        width: 150px;
+    }
+
+    p {
+        color: $review-color2;
+        margin-bottom: 0;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+.review__bottom {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $review-color2;
+}
+
+.review__bottom-wrapp {
+    display: flex;
+    align-items: center;
+}
+
+.review__useful {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    p {
+        margin-left: 10px;
+    }
+}
+
+.review__share {
+    display: flex;
+    align-items: center;
+
+    p {
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,128 @@
+.footer {
+    position: relative;
+    z-index: 1;
+    color: $color-light;
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+    ul,
+    ol,
+    li {
+        list-style: none;
+    }
+}
+
+.footer__container {
+
+
+    @media screen and (min-width: 769px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.footer__nav {
+    margin-bottom: 25px;
+}
+
+.footer__list {
+    text-align: center;
+    margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.footer__item {
+    @media screen and (min-width: 768px) {
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+
+}
+
+.footer__link {
+    font-family: $primary-font;
+    color: $color-light;
+    font-weight: 500;
+    transition: color 0.3s;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+        color: $text-color;
+    }
+}
+
+.footer__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.footer__icons-18 {
+    &:not(:last-child) {
+        margin-right: 25px;
+    }
+}
+
+.footer__copyright {
+    @media screen and (max-width: 768.98px) {
+        text-align: center;
+    }
+}
+
+.footer__scrollup {
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    z-index: 20;
+    background: transparent;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    @media screen and (max-width: 1024px) {
+        right: 15px;
+    }
+}
+
+.scrollup {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background-color: $secondary-color;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &::after {
+        content: "";
+        background-size: contain;
+        position: absolute;
+        background: url(../images/icons/scrollup.png);
+        width: 24px;
+        height: 24px;
+    }
+
+    &:hover {
+        background-color: $color-medium;
+    }
+}

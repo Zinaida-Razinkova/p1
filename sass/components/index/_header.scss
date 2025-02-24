@@ -1,0 +1,273 @@
+header,
+aside {
+
+    ul,
+    ol,
+    li {
+        list-style: none;
+    }
+}
+
+.header {
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    height: 120px;
+    background-color: $primary-color;
+    box-shadow: 0 0 1px #00000052, 0 4px 8px #0000003d;
+    -webkit-box-shadow: 0 0 1px #00000052, 0 4px 8px #0000003d;
+    -moz-box-shadow: 0 0 1px #00000052, 0 4px 8px #0000003d;
+
+    @media screen and (min-width: 768px) {
+        height: 84px;
+    }
+}
+
+.header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.header__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (min-width: 769px) {
+        margin-right: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.header__list {
+    display: none;
+
+    @media screen and (min-width: 769px) {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.header__item {
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.aside__button {
+    font-size: 20px;
+}
+
+.aside__item:not(:last-child) {
+    margin-bottom: 25px;
+
+}
+
+.aside__link {
+    padding: 10px;
+}
+
+.aside__link,
+.header__link {
+    font-family: $primary-font;
+    font-size: 20px;
+    color: $text-color;
+    font-weight: 500;
+    transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -ms-transition: color 0.3s;
+    -o-transition: color 0.3s;
+
+    &:hover,
+    &:focus {
+        color: $color-light;
+    }
+}
+
+.header__login {
+    display: -webkit-box;
+    display: -ms-flexbox;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 768px) {
+        flex: 1;
+        width: 100%;
+    }
+}
+
+.header__login-button {
+    flex: 1;
+
+    &:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.header__login-bonus {
+    position: relative;
+    width: 100%;
+    flex: 1;
+}
+
+.header__login-gift {
+    position: absolute;
+    top: -4px;
+    right: -5px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    width: 40px;
+    font-size: 8px;
+    background-color: #355BE2;
+    border-radius: 6px;
+    padding: 2px;
+}
+
+.header__login-gift img {
+    width: 10px;
+    height: 10px;
+    margin-right: 2px;
+}
+
+.button__menu-open {
+    &:not(:last-child) {
+        margin-right: 5px;
+    }
+}
+
+.button__menu-open,
+.button__menu-close {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    @media screen and (min-width: 769px) {
+        display: none;
+    }
+}
+
+.aside__menu {
+    @media screen and (max-width: 768.98px) {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 100;
+        width: 300px;
+        height: 100vh;
+        overflow: auto;
+        background-color: $primary-color;
+        opacity: 0;
+        padding: 10px 25px 25px 25px;
+
+        &.is-open {
+            opacity: 1;
+            left: 0px;
+            -webkit-transition: left 0.4s;
+            -moz-transition: left 0.4s;
+            -o-transition: left 0.4s;
+            transition: left 0.4s;
+        }
+    }
+
+}
+
+aside {
+    @media screen and (min-width: 769px) {
+        display: none;
+    }
+}
+
+.aside__menu-wrapp {
+    position: relative;
+}
+
+.aside__menu-button {
+    position: absolute;
+    top: 15px;
+    right: 0;
+
+    @media screen and (max-width: 768px) {
+        top: 10px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.header__logo {
+    margin-bottom: 20px;
+}
+
+.aside__menu-login,
+.header__menu-login {
+    @media screen and (max-width: 768px) {
+        margin-bottom: 40px;
+    }
+
+}
+
+.aside__menu-login .button,
+.header__menu-login .button {
+    max-width: 300px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #000;
+
+    transition: all 0.8s ease 0s;
+    pointer-events: none;
+    overflow-y: scroll;
+    opacity: 0;
+    visibility: hidden;
+
+    @media screen and (min-width: 769px) {
+        display: none;
+    }
+}
+
+body.backdrop__show .backdrop {
+    opacity: 0.5;
+    visibility: visible;
+    pointer-events: initial;
+}

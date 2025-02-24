@@ -1,0 +1,98 @@
+body {
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: $primary-color;
+    color: $text-color;
+}
+
+section {
+    padding-top: 40px;
+    border-bottom: 1px solid #ffffff1f;
+    padding-bottom: 50px;
+
+    &:first-child {
+        padding-top: 100px;
+    }
+
+    @media screen and (max-width: 768px) {
+        &:first-child {
+            padding-top: 150px;
+        }
+    }
+
+    &:last-child {
+        padding-bottom: 80px;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: $text-color;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    ul,
+    ol {
+        padding-left: 30px;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    ul,
+    ol {
+        li {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    ul,
+    ol {
+        span {
+            font-weight: 700;
+        }
+    }
+
+    p {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.container {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 25px;
+
+    @media screen and (max-width: 1024px) {
+        padding: 0 15px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: clip;
+}
+
+main {
+    flex: 1 1 auto;
+}
